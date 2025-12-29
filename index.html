@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Paperclip from syllables</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  body {
+  margin: 0;
+  background: #9f9f9f;
+}
+
+.canvas {
+  width: 100%;
+  position: relative;
+  background: #9f9f9f;
+}
+
+.syllable {
+  position: absolute;
+  font-size: 18px;
+  font-family: "Handjet", monospace;
+  color: white;
+  cursor: pointer;
+  text-shadow:
+    0 0 5px white,
+    0 0 10px white,
+    0 0 15px white;
+  transition: text-shadow 0.5s ease-in-out, transform 0.3s ease-out;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 3px white,
+      0 0 6px white,
+      0 0 9px white;
+  }
+  50% {
+    text-shadow:
+      0 0 6px white,
+      0 0 12px white,
+      0 0 18px white;
+  }
+}
+
+.syllable.glow {
+  text-shadow: 0 0 4px white, 0 0 8px white;
+}
+</style>
+</head>
+<body>
+
+<div class="canvas" id="canvas">
+
+    <div style="left: 530px; top: 122px;" class="syllable">hel</div>
+<div style="left: 499px; top: 224px;" class="syllable">hel</div>
+<div style="left: 525px; top: 330px;" class="syllable">hel</div>
+<div style="left: 588px; top: 417px;" class="syllable">hel</div>
+<div style="left: 663px; top: 501px;" class="syllable">hel</div>
+<div style="left: 738px; top: 591px;" class="syllable">hel</div>
+<div style="left: 816px; top: 681px;" class="syllable">hel</div>
+<div style="left: 892px; top: 769px;" class="syllable">hel</div>
+<div style="left: 970px; top: 859px;" class="syllable">hel</div>
+<div style="left: 1051px; top: 942px;" class="syllable">hel</div>
+<div style="left: 1148px; top: 992px;" class="syllable">hel</div>
+<div style="left: 1248px; top: 998px;" class="syllable">hel</div>
+<div style="left: 1341px; top: 946px;" class="syllable">hel</div>
+<div style="left: 1397px; top: 863px;" class="syllable">hel</div>
+<div style="left: 1403px; top: 757px;" class="syllable">hel</div>
+<div style="left: 1370px; top: 653px;" class="syllable">hel</div>
+<div style="left: 1307px; top: 563px;" class="syllable">hel</div>
+<div style="left: 1230px; top: 475px;" class="syllable">hel</div>
+<div style="left: 1155px; top: 386px;" class="syllable">hel</div>
+<div style="left: 1075px; top: 298px;" class="syllable">hel</div>
+<div style="left: 615px; top: 63px;" class="syllable">hel</div>
+<div style="left: 798px; top: 122px;" class="syllable">hel</div>
+<div style="left: 876px; top: 206px;" class="syllable">hel</div>
+<div style="left: 951px; top: 287px;" class="syllable">hel</div>
+<div style="left: 1018px; top: 372px;" class="syllable">hel</div>
+<div style="left: 1165px; top: 536px;" class="syllable">hel</div>
+<div style="left: 1222px; top: 641px;" class="syllable">hel</div>
+<div style="left: 1195px; top: 745px;" class="syllable">hel</div>
+<div style="left: 1004px; top: 725px;" class="syllable">hel</div>
+<div style="left: 912px; top: 637px;" class="syllable">hel</div>
+<div style="left: 828px; top: 548px;" class="syllable">hel</div>
+<div style="left: 1103px; top: 787px;" class="syllable">hel</div>
+<div style="left: 1088px; top: 457px;" class="syllable">hel</div>
+<div style="left: 711px; top: 69px;" class="syllable">hel</div>
+
+<div style="left: 545px; top: 106px;" class="syllable">lo</div>
+<div style="left: 500px; top: 208px;" class="syllable">lo</div>
+<div style="left: 537px; top: 346px;" class="syllable">lo</div>
+<div style="left: 603px; top: 433px;" class="syllable">lo</div>
+<div style="left: 681px; top: 517px;" class="syllable">lo</div>
+<div style="left: 756px; top: 605px;" class="syllable">lo</div>
+<div style="left: 831px; top: 697px;" class="syllable">lo</div>
+<div style="left: 910px; top: 787px;" class="syllable">lo</div>
+<div style="left: 987px; top: 877px;" class="syllable">lo</div>
+<div style="left: 1070px; top: 952px;" class="syllable">lo</div>
+<div style="left: 1169px; top: 998px;" class="syllable">lo</div>
+<div style="left: 1269px; top: 992px;" class="syllable">lo</div>
+<div style="left: 1359px; top: 932px;" class="syllable">lo</div>
+<div style="left: 1401px; top: 845px;" class="syllable">lo</div>
+<div style="left: 1403px; top: 737px;" class="syllable">lo</div>
+<div style="left: 1363px; top: 637px;" class="syllable">lo</div>
+<div style="left: 1296px; top: 547px;" class="syllable">lo</div>
+<div style="left: 1219px; top: 458px;" class="syllable">lo</div>
+<div style="left: 1145px; top: 368px;" class="syllable">lo</div>
+<div style="left: 1065px; top: 280px;" class="syllable">lo</div>
+<div style="left: 500px; top: 242px;" class="syllable">lo</div>
+<div style="left: 636px; top: 60px;" class="syllable">lo</div>
+<div style="left: 816px; top: 138px;" class="syllable">lo</div>
+<div style="left: 894px; top: 222px;" class="syllable">lo</div>
+<div style="left: 969px; top: 303px;" class="syllable">lo</div>
+<div style="left: 1181px; top: 554px;" class="syllable">lo</div>
+<div style="left: 1227px; top: 661px;" class="syllable">lo</div>
+<div style="left: 1189px; top: 761px;" class="syllable">lo</div>
+<div style="left: 989px; top: 709px;" class="syllable">lo</div>
+<div style="left: 901px; top: 621px;" class="syllable">lo</div>
+<div style="left: 817px; top: 532px;" class="syllable">lo</div>
+<div style="left: 1088px; top: 781px;" class="syllable">lo</div>
+<div style="left: 1033px; top: 388px;" class="syllable">lo</div>
+<div style="left: 1106px; top: 469px;" class="syllable">lo</div>
+<div style="left: 730px; top: 77px;" class="syllable">lo</div>
+
+<div style="left: 556px; top: 96px;" class="syllable">an</div>
+<div style="left: 503px; top: 192px;" class="syllable">an</div>
+<div style="left: 501px; top: 258px;" class="syllable">an</div>
+<div style="left: 545px; top: 356px;" class="syllable">an</div>
+<div style="left: 614px; top: 443px;" class="syllable">an</div>
+<div style="left: 692px; top: 530px;" class="syllable">an</div>
+<div style="left: 767px; top: 617px;" class="syllable">an</div>
+<div style="left: 842px; top: 711px;" class="syllable">an</div>
+<div style="left: 919px; top: 799px;" class="syllable">an</div>
+<div style="left: 998px; top: 890px;" class="syllable">an</div>
+<div style="left: 1082px; top: 962px;" class="syllable">an</div>
+<div style="left: 1182px; top: 1002px;" class="syllable">an</div>
+<div style="left: 1282px; top: 984px;" class="syllable">an</div>
+<div style="left: 1370px; top: 920px;" class="syllable">an</div>
+<div style="left: 1404px; top: 825px;" class="syllable">an</div>
+<div style="left: 1396px; top: 719px;" class="syllable">an</div>
+<div style="left: 1349px; top: 621px;" class="syllable">an</div>
+<div style="left: 1282px; top: 531px;" class="syllable">an</div>
+<div style="left: 1207px; top: 442px;" class="syllable">an</div>
+<div style="left: 1130px; top: 352px;" class="syllable">an</div>
+<div style="left: 1050px; top: 264px;" class="syllable">an</div>
+<div style="left: 649px; top: 57px;" class="syllable">an</div>
+<div style="left: 827px; top: 148px;" class="syllable">an</div>
+<div style="left: 906px; top: 232px;" class="syllable">an</div>
+<div style="left: 978px; top: 315px;" class="syllable">an</div>
+<div style="left: 1042px; top: 398px;" class="syllable">an</div>
+<div style="left: 1113px; top: 479px;" class="syllable">an</div>
+<div style="left: 1188px; top: 567px;" class="syllable">an</div>
+<div style="left: 1222px; top: 677px;" class="syllable">an</div>
+<div style="left: 973px; top: 695px;" class="syllable">an</div>
+<div style="left: 886px; top: 607px;" class="syllable">an</div>
+<div style="left: 802px; top: 518px;" class="syllable">an</div>
+<div style="left: 1070px; top: 773px;" class="syllable">an</div>
+<div style="left: 1172px; top: 767px;" class="syllable">an</div>
+<div style="left: 741px; top: 83px;" class="syllable">an</div>
+
+<div style="left: 572px; top: 85px;" class="syllable">ja</div>
+<div style="left: 510px; top: 172px;" class="syllable">ja</div>
+<div style="left: 508px; top: 274px;" class="syllable">ja</div>
+<div style="left: 556px; top: 372px;" class="syllable">ja</div>
+<div style="left: 629px; top: 459px;" class="syllable">ja</div>
+<div style="left: 707px; top: 546px;" class="syllable">ja</div>
+<div style="left: 782px; top: 635px;" class="syllable">ja</div>
+<div style="left: 852px; top: 725px;" class="syllable">ja</div>
+<div style="left: 934px; top: 815px;" class="syllable">ja</div>
+<div style="left: 1013px; top: 900px;" class="syllable">ja</div>
+<div style="left: 1099px; top: 972px;" class="syllable">ja</div>
+<div style="left: 1200px; top: 1002px;" class="syllable">ja</div>
+<div style="left: 1300px; top: 958px;" class="syllable">ja</div>
+<div style="left: 1379px; top: 906px;" class="syllable">ja</div>
+<div style="left: 1408px; top: 807px;" class="syllable">ja</div>
+<div style="left: 1393px; top: 703px;" class="syllable">ja</div>
+<div style="left: 1344px; top: 607px;" class="syllable">ja</div>
+<div style="left: 1272px; top: 521px;" class="syllable">ja</div>
+<div style="left: 1198px; top: 428px;" class="syllable">ja</div>
+<div style="left: 1121px; top: 338px;" class="syllable">ja</div>
+<div style="left: 1041px; top: 250px;" class="syllable">ja</div>
+<div style="left: 666px; top: 57px;" class="syllable">ja</div>
+<div style="left: 843px; top: 162px;" class="syllable">ja</div>
+<div style="left: 921px; top: 242px;" class="syllable">ja</div>
+<div style="left: 989px; top: 331px;" class="syllable">ja</div>
+<div style="left: 1053px; top: 412px;" class="syllable">ja</div>
+<div style="left: 1128px; top: 482px;" class="syllable">ja</div>
+<div style="left: 1202px; top: 583px;" class="syllable">ja</div>
+<div style="left: 962px; top: 683px;" class="syllable">ja</div>
+<div style="left: 876px; top: 593px;" class="syllable">ja</div>
+<div style="left: 792px; top: 504px;" class="syllable">ja</div>
+<div style="left: 1222px; top: 693px;" class="syllable">ja</div>
+<div style="left: 1159px; top: 773px;" class="syllable">ja</div>
+<div style="left: 1054px; top: 761px;" class="syllable">ja</div>
+<div style="left: 757px; top: 90px;" class="syllable">ja</div>
+
+<div style="left: 713px; top: 560px;" class="syllable">ma</div>
+<div style="left: 788px; top: 651px;" class="syllable">ma</div>
+<div style="left: 863px; top: 741px;" class="syllable">ma</div>
+<div style="left: 944px; top: 825px;" class="syllable">ma</div>
+<div style="left: 1019px; top: 916px;" class="syllable">ma</div>
+<div style="left: 1113px; top: 978px;" class="syllable">ma</div>
+<div style="left: 1213px; top: 1004px;" class="syllable">ma</div>
+<div style="left: 1311px; top: 968px;" class="syllable">ma</div>
+<div style="left: 1385px; top: 894px;" class="syllable">ma</div>
+<div style="left: 1404px; top: 789px;" class="syllable">ma</div>
+<div style="left: 1383px; top: 686px;" class="syllable">ma</div>
+<div style="left: 1326px; top: 591px;" class="syllable">ma</div>
+<div style="left: 1253px; top: 506px;" class="syllable">ma</div>
+<div style="left: 1180px; top: 414px;" class="syllable">ma</div>
+<div style="left: 1103px; top: 324px;" class="syllable">ma</div>
+<div style="left: 1023px; top: 236px;" class="syllable">ma</div>
+<div style="left: 678px; top: 57px;" class="syllable">ma</div>
+<div style="left: 853px; top: 174px;" class="syllable">ma</div>
+<div style="left: 927px; top: 255px;" class="syllable">ma</div>
+<div style="left: 997px; top: 343px;" class="syllable">ma</div>
+<div style="left: 1064px; top: 426px;" class="syllable">ma</div>
+<div style="left: 1135px; top: 506px;" class="syllable">ma</div>
+<div style="left: 941px; top: 667px;" class="syllable">ma</div>
+<div style="left: 857px; top: 577px;" class="syllable">ma</div>
+<div style="left: 773px; top: 488px;" class="syllable">ma</div>
+<div style="left: 1206px; top: 601px;" class="syllable">ma</div>
+<div style="left: 1211px; top: 713px;" class="syllable">ma</div>
+<div style="left: 1034px; top: 749px;" class="syllable">ma</div>
+<div style="left: 1139px; top: 783px;" class="syllable">ma</div>
+<div style="left: 767px; top: 97px;" class="syllable">ma</div>
+
+<div style="left: 602px; top: 68px;" class="syllable">is</div>
+<div style="left: 521px; top: 136px;" class="syllable">is</div>
+<div style="left: 519px; top: 314px;" class="syllable">is</div>
+<div style="left: 577px; top: 401px;" class="syllable">is</div>
+<div style="left: 652px; top: 487px;" class="syllable">is</div>
+<div style="left: 732px; top: 574px;" class="syllable">is</div>
+<div style="left: 807px; top: 667px;" class="syllable">is</div>
+<div style="left: 881px; top: 755px;" class="syllable">is</div>
+<div style="left: 960px; top: 841px;" class="syllable">is</div>
+<div style="left: 1038px; top: 932px;" class="syllable">is</div>
+<div style="left: 1135px; top: 984px;" class="syllable">is</div>
+<div style="left: 1234px; top: 1002px;" class="syllable">is</div>
+<div style="left: 1330px; top: 956px;" class="syllable">is</div>
+<div style="left: 1395px; top: 878px;" class="syllable">is</div>
+<div style="left: 1404px; top: 773px;" class="syllable">is</div>
+<div style="left: 1379px; top: 670px;" class="syllable">is</div>
+<div style="left: 1319px; top: 577px;" class="syllable">is</div>
+<div style="left: 1247px; top: 492px;" class="syllable">is</div>
+<div style="left: 1170px; top: 402px;" class="syllable">is</div>
+<div style="left: 1093px; top: 312px;" class="syllable">is</div>
+<div style="left: 1013px; top: 224px;" class="syllable">is</div>
+<div style="left: 698px; top: 61px;" class="syllable">is</div>
+<div style="left: 787px; top: 107px;" class="syllable">is</div>
+<div style="left: 871px; top: 190px;" class="syllable">is</div>
+<div style="left: 943px; top: 271px;" class="syllable">is</div>
+<div style="left: 1014px; top: 356px;" class="syllable">is</div>
+<div style="left: 1080px; top: 442px;" class="syllable">is</div>
+<div style="left: 1154px; top: 520px;" class="syllable">is</div>
+<div style="left: 1216px; top: 621px;" class="syllable">is</div>
+<div style="left: 930px; top: 651px;" class="syllable">is</div>
+<div style="left: 846px; top: 564px;" class="syllable">is</div>
+<div style="left: 762px; top: 475px;" class="syllable">is</div>
+<div style="left: 1022px; top: 739px;" class="syllable">is</div>
+<div style="left: 1125px; top: 787px;" class="syllable">is</div>
+<div style="left: 1208px; top: 729px;" class="syllable">is</div>
+</div>
+
+<script>
+const syllables = document.querySelectorAll(".syllable");
+
+syllables.forEach(el => {
+  const rect = el.getBoundingClientRect();
+  el.dataset.origX = rect.left;
+  el.dataset.origY = rect.top;
+  el.vx = 0;
+  el.vy = 0;
+  el.dataset.x = 0;
+  el.dataset.y = 0;
+
+  // эффект свечения и случайная задержка анимации мерцания
+  const delay = Math.random() * 3;
+  el.style.animationDelay = `${delay}s`;
+  el.classList.add("glow");
+});
+
+// радиус воздействия курсора
+const cursorRadius = 55;
+
+document.addEventListener("mousemove", e => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  syllables.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const centerX = rect.left + rect.width/2;
+    const centerY = rect.top + rect.height/2;
+
+    const dx = centerX - mouseX;
+    const dy = centerY - mouseY;
+    const dist = Math.sqrt(dx*dx + dy*dy);
+
+    if (dist < cursorRadius) {
+      const force = (cursorRadius - dist) / cursorRadius * 15;
+      const angle = Math.atan2(dy, dx);
+      el.vx += Math.cos(angle) * force;
+      el.vy += Math.sin(angle) * force;
+
+      el.classList.add("active");
+      animate(el);
+    }
+  });
+});
+
+function animate(el) {
+  if (el.animating) return;
+  el.animating = true;
+
+  const friction = 0.90;
+
+  function frame() {
+    el.vx *= friction;
+    el.vy *= friction;
+
+    el.dataset.x = (parseFloat(el.dataset.x) || 0) + el.vx;
+    el.dataset.y = (parseFloat(el.dataset.y) || 0) + el.vy;
+
+    el.style.transform = `translate(${el.dataset.x}px, ${el.dataset.y}px)`;
+
+    if (Math.abs(el.vx) > 0.1 || Math.abs(el.vy) > 0.1) {
+      requestAnimationFrame(frame);
+    } else {
+      el.animating = false;
+    }
+  }
+
+  frame();
+}
+
+// возврат элементов
+setInterval(() => {
+  syllables.forEach((el, index) => {
+    setTimeout(() => {
+      el.style.transition = "none";
+      el.style.transform = "translate(0,0)";
+      el.dataset.x = 0;
+      el.dataset.y = 0;
+      el.vx = 0;
+      el.vy = 0;
+      el.classList.remove("active");
+    }, index * 50);
+  });
+}, 3000);
+</script>
+
+</body>
+</html>
